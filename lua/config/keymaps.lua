@@ -64,3 +64,11 @@ vim.keymap.set({ "n", "v" }, "<leader>D", '"+D') -- delete line
 -- Paste from system clipboard
 vim.keymap.set("n", "<leader>p", '"+p') -- paste after cursor
 vim.keymap.set("n", "<leader>P", '"+P') -- paste before cursor
+
+-- terminal commands
+vim.cmd("autocmd TermEnter term://*toggleterm#* tnoremap <silent><c-t> <Cmd>exe v:count1 . 'ToggleTerm'<CR>")
+vim.cmd("nnoremap <silent><c-t> <Cmd>exe v:count1 . 'ToggleTerm'<CR>")
+vim.cmd("inoremap <silent><c-t> <Esc><Cmd>exe v:count1 . 'ToggleTerm'<CR>")
+
+-- vim.cmd("nnoremap <c-O> <Cmd>exe 'NvimTreeToggle'<CR>")
+vim.cmd([[nnoremap \ :Neotree reveal<cr>]])

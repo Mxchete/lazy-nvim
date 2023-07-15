@@ -21,7 +21,5 @@ vim.cmd("set sts=2")
 vim.cmd("autocmd Filetype java setlocal ts=4 sw=4 sts=0 expandtab")
 vim.cmd("autocmd Filetype python setlocal ts=4 sw=4 sts=0 expandtab")
 
--- terminal commands
-vim.cmd("autocmd TermEnter term://*toggleterm#* tnoremap <silent><c-t> <Cmd>exe v:count1 . 'ToggleTerm'<CR>")
-vim.cmd("nnoremap <silent><c-t> <Cmd>exe v:count1 . 'ToggleTerm'<CR>")
-vim.cmd("inoremap <silent><c-t> <Esc><Cmd>exe v:count1 . 'ToggleTerm'<CR>")
+-- vim.g.loaded_netrw = 1
+-- vim.g.loaded_netrwPlugin = 1
