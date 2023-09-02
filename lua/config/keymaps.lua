@@ -70,5 +70,5 @@ vim.cmd("autocmd TermEnter term://*toggleterm#* tnoremap <silent><c-t> <Cmd>exe 
 vim.cmd("nnoremap <silent><c-t> <Cmd>exe v:count1 . 'ToggleTerm'<CR>")
 vim.cmd("inoremap <silent><c-t> <Esc><Cmd>exe v:count1 . 'ToggleTerm'<CR>")
 
--- vim.cmd("nnoremap <c-O> <Cmd>exe 'NvimTreeToggle'<CR>")
-vim.cmd([[nnoremap \ :Neotree position=current toggle<cr>]])
+-- Neotree toggle key
+vim.cmd([[nnoremap \ :Neotree toggle<cr>]])
