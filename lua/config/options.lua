@@ -4,7 +4,7 @@
 --
 -- Main Configs
 vim.cmd("set nu rnu")
-vim.cmd("let g:python3_host_prog = 'C:Python311python.exe'")
+-- vim.cmd("let g:python3_host_prog = 'C:Python311python.exe'")
 -- vim.cmd([[colorscheme tokyonight-night]])
 vim.cmd("set termguicolors")
 vim.cmd("set ai")
