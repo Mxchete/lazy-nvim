@@ -79,13 +79,13 @@ return {
                   "--add-opens",
                   "java.base/java.lang=ALL-UNNAMED",
                   "-jar",
-                  vim.fn.glob("C:/Users/User/AppData/Local/eclipse.jdt.ls/plugins/org.eclipse.equinox.launcher_*.jar"),
+                  vim.fn.glob("C:/Users/ellio/AppData/Local/eclipse.jdt.ls/plugins/org.eclipse.equinox.launcher_*.jar"),
                   -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                       ^^^^^^^^^^^^^^
                   -- Must point to the                                                     Change this to
                   -- eclipse.jdt.ls installation                                           the actual version
 
                   "-configuration",
-                  "C:/Users/User/AppData/Local/eclipse.jdt.ls/config_win",
+                  "C:/Users/ellio/AppData/Local/eclipse.jdt.ls/config_win",
                   -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^        ^^^^^^
                   -- Must point to the                      Change to one of `linux`, `win` or `mac`
                   -- eclipse.jdt.ls installation            Depending on your system.

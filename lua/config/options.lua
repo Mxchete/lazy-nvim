@@ -23,3 +23,6 @@ vim.cmd("autocmd Filetype python setlocal ts=4 sw=4 sts=0 expandtab")
 
 -- vim.g.loaded_netrw = 1
 -- vim.g.loaded_netrwPlugin = 1
+
+-- set transparency for neovide gui
+vim.g.neovide_transparency = 0.9
