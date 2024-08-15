@@ -11,6 +11,8 @@ vim.cmd("set ai")
 vim.cmd("set si")
 vim.cmd("set et")
 vim.cmd("set scrolloff=8")
+vim.cmd("set ic")
+vim.cmd("set clipboard=unnamedplus")
 
 -- Default indent is 2 spaces
 vim.cmd("set sw=2")

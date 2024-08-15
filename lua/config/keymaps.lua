@@ -53,6 +53,7 @@ keymap("i", "jk", "<ESC>", opts)
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
+--[[
 -- Yank into system clipboard
 vim.keymap.set({ "n", "v" }, "<leader>y", '"+y') -- yank motion
 vim.keymap.set({ "n", "v" }, "<leader>Y", '"+Y') -- yank line
@@ -64,6 +65,8 @@ vim.keymap.set({ "n", "v" }, "<leader>D", '"+D') -- delete line
 -- Paste from system clipboard
 vim.keymap.set("n", "<leader>p", '"+p') -- paste after cursor
 vim.keymap.set("n", "<leader>P", '"+P') -- paste before cursor
+]]
+--
 
 -- terminal commands
 vim.cmd("autocmd TermEnter term://*toggleterm#* tnoremap <silent><c-t> <Cmd>exe v:count1 . 'ToggleTerm'<CR>")
@@ -72,3 +75,7 @@ vim.cmd("inoremap <silent><c-t> <Esc><Cmd>exe v:count1 . 'ToggleTerm'<CR>")
 
 -- Neotree toggle key
 vim.cmd([[nnoremap \ :Neotree toggle<cr>]])
+
+-- Toggle options
+vim.cmd("nnoremap <F2> :set nu rnu!<CR>")
+vim.cmd("nnoremap <F3> :set ic!<CR>")
