@@ -74,7 +74,7 @@ vim.cmd("nnoremap <silent><c-t> <Cmd>exe v:count1 . 'ToggleTerm'<CR>")
 vim.cmd("inoremap <silent><c-t> <Esc><Cmd>exe v:count1 . 'ToggleTerm'<CR>")
 
 -- Neotree toggle key
-vim.cmd([[nnoremap \ :Neotree toggle<cr>]])
+vim.cmd([[nnoremap \ :Neotree toggle right<cr>]])
 
 -- Toggle options
 vim.cmd("nnoremap <F2> :set nu rnu!<CR>")
