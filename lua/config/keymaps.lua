@@ -79,3 +79,33 @@ vim.cmd([[nnoremap \ :Neotree toggle right<cr>]])
 -- Toggle options
 vim.cmd("nnoremap <F2> :set nu rnu!<CR>")
 vim.cmd("nnoremap <F3> :set ic!<CR>")
+
+vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+
+vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+
+local fugitive_config = vim.api.nvim_create_augroup("fugitive_config", {})
+
+local autocmd = vim.api.nvim_create_autocmd
+autocmd("BufWinEnter", {
+  group = fugitive_config,
+  pattern = "*",
+  callback = function()
+    if vim.bo.ft ~= "fugitive" then
+      return
+    end
+
+    local bufnr = vim.api.nvim_get_current_buf()
+    local opt = { buffer = bufnr, remap = false }
+    vim.keymap.set("n", "<leader>p", function()
+      vim.cmd.Git("push")
+    end, opt)
+
+    -- rebase always
+    vim.keymap.set("n", "<leader>P", function()
+      vim.cmd.Git({ "pull", "--rebase" })
+    end, opt)
+
+    vim.keymap.set("n", "<leader>t", ":Git push -u origin ", opt)
+  end,
+})
