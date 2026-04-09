@@ -37,7 +37,6 @@ return {
       "perl",
       "php",
       "rust",
-      "verilog",
       "javascript",
       "json",
       "lua",
